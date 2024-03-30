@@ -52,12 +52,23 @@ def largest_factor(x):
     """
     "*** YOUR CODE HERE ***"
     #from math import sqrt
-    a = x/2
+    """a = x/2
     max = 0
     for i in range(a):
         m = a/i
         if a%i == 0 and m > max:
             max = a
+    return max"""
+    a = int(x/2)
+    max = 0
+    for i in range(2, a):
+        #1. the variable of range cannot be floats.
+        #2. the lower boundary of range function cannot be 1 because it will make largest factor the number itself.
+        m = x/i
+        if x%i == 0 and m > max:
+            max = int(m)
+    if max == 0: # if max==0 it means number is a prime since there isn't other factors except 1.
+        return 1
     return max
 
 

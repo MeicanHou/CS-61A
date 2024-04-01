@@ -115,16 +115,15 @@ def with_if_function():
 
 def cond():
     "*** YOUR CODE HERE ***"
-    print(42)
-    return True
+    return print(47)
 
 def true_func():
     "*** YOUR CODE HERE ***"
-    return print(47)
+    return print(42)
 
 def false_func():
     "*** YOUR CODE HERE ***"
-    return print()
+    return None
 
 
 def hailstone(x):
@@ -147,9 +146,11 @@ def hailstone(x):
     while not x==1:
         print(x)
         if x%2 == 0:
-            x = x/2
+            x = int(x/2)
         else:
             x = 3*x + 1
         num = num+1
+    num += 1
+    print(x)
     return num
 
